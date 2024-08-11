@@ -52,6 +52,9 @@ Install Required Packages
 pip install streamlit
 ```
 
+Sometimes, you might be prompted to update pip during the installation process. If prompted, follow the instructions provided to update pip by running the command suggested in the prompt.
+
+
 ## How to Run the Project
 1. Start the Streamlit app
 ```plaintext
