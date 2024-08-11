@@ -32,22 +32,24 @@ git clone https://github.com/RextonRZ/AI_Newbies-Streamlit.git
 cd AI_Newbies-Upstage-AI-Hackathon
 ```
 
-3. Install dependencies
-It is recommended to use a virtual environment. If you do not have venv installed, you can install it using:
+3. Virtual environment Set up
 ```plaintext
-pip install virtualenv
+python -m venv venv
 ```
 
-Create and activate a virtual environment:
+Activate the virtual environment after creating:
 ```plaintext
-virtualenv venv
-venv\Scripts\activate   #Windows
-#source venv/bin/activate  #Linux and macOS
+#For Command Prompt:
+venv\Scripts\activate 
+```
+```plaintext
+#For PowerShell:
+.\venv\Scripts\Activate
 ```
 
-Install the project dependencies:
+Install Required Packages
 ```plaintext
-pip install -r requirements.txt
+pip install streamlit
 ```
 
 ## How to Run the Project
