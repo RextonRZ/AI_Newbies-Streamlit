@@ -48,11 +48,19 @@ venv\Scripts\activate
 ```
 
 Install Required Packages
+1. Install Streamlit
+Install the Streamlit package by running the following command:
 ```plaintext
 pip install streamlit
 ```
 
 Sometimes, you might be prompted to update pip during the installation process. If prompted, follow the instructions provided to update pip by running the command suggested in the prompt.
+
+2. Install Predibase
+To use the Predibase library, install it with the following command:
+```plaintext
+pip install predibase
+```
 
 
 ## How to Run the Project
