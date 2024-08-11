@@ -38,9 +38,9 @@ def initialize_session_state():
     
         st.session_state.lorax_client = pb.deployments.client(model_name)
 
-def generate_response(prompt, lorax_client, adapter_id):
+def generate_response(prompt, lorax_client):
     try:
-        response = lorax_client.generate(prompt, adapter_id=adapter_id, max_new_tokens=1000)
+        response = lorax_client.generate(prompt, max_new_tokens=1000)
         return response.generated_text
     except Exception as e:
         print("Error generating response:", e)
@@ -52,10 +52,8 @@ def on_click_callback():
         return  
 
     lorax_client = st.session_state.lorax_client
-    adapter_id = "AINewbiesTourismGPT/1"  # Specify the adapter ID here
 
-    
-    llm_response = generate_response(human_prompt, lorax_client, adapter_id)
+    llm_response = generate_response(human_prompt, lorax_client)
 
     st.session_state.history.append(
         Message("human", human_prompt)
@@ -65,7 +63,7 @@ def on_click_callback():
     )
 
     st.session_state.human_prompt = ""
-
+    
 load_css()
 initialize_session_state()
 
