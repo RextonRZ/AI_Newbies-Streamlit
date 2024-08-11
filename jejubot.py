@@ -1,5 +1,5 @@
 from predibase import Predibase
-pb = Predibase(api_token="pb_CS4d4ok0V5uMMPFwWGM-lQ")  ##Your Predibase API key
+pb = Predibase(api_token="PREDIBASE_API_KEY")
 import streamlit as st
 import streamlit.components.v1 as components
 import os
