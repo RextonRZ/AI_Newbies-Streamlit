@@ -5,11 +5,12 @@ from datetime import datetime
 from predibase import Predibase
 from dataclasses import dataclass
 from typing import Literal
-from dotenv import load_dotenv
 
-load_dotenv()
-
-pb = Predibase(api_token=os.getenv("PREDIBASE_API_TOKEN"))
+try:
+    api_token = st.secrets["predibase"]["PREDIBASE_API_TOKEN"]
+    pb = Predibase(api_token=api_token)
+except KeyError:
+    st.error("API token is missing in secrets.toml. Please make sure it is set correctly.")
 
 # Convert images to base64 for embedding in HTML
 def image_to_base64(image_path):
